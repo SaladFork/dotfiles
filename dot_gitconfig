@@ -1,9 +1,42 @@
 [user]
   name = Elad Shahar
   email = SaladFork@Gmail.com
+  # signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHeL7gY4FPO5MnWBbbjOK2Wb1Su6usLg64tCvmcTa8wx
+
+[alias]
+  ; Add defaults for existing commands
+  branch = branch --sort=-committerdate
+
+  ; Shortcuts
+  co = checkout
+  ci = commit
+  st = status --branch --short
+  br = branch
+  cl = clone
+  cp = cherry-pick
+
+  ; New git commands (Log)
+  ll  = log --color-words               --format='%C(bold blue)%h%C(reset) -%C(bold green)%d%C(reset) %C(white)%s%C(reset) %C(dim white)<%an>%C(reset) %C(dim yellow)(%ar)%C(reset)'
+  lg  = log --color-words --graph       --format='%C(bold blue)%h%C(reset) -%C(bold green)%d%C(reset) %C(white)%s%C(reset) %C(dim white)<%an>%C(reset) %C(dim yellow)(%ar)%C(reset)'
+  lla = log --color-words --all         --format='%C(bold blue)%h%C(reset) -%C(bold green)%d%C(reset) %C(white)%s%C(reset) %C(dim white)<%an>%C(reset) %C(dim yellow)(%ar)%C(reset)'
+  lga = log --color-words --all --graph --format='%C(bold blue)%h%C(reset) -%C(bold green)%d%C(reset) %C(white)%s%C(reset) %C(dim white)<%an>%C(reset) %C(dim yellow)(%ar)%C(reset)'
+
+[core]
+  excludesfile = ~/.config/git/ignore
+
+[diff]
+  algorithm = histogram
+  indentHeuristic = on
 
 [url "https://github.com"]
   insteadOf = "git://github.com/"
 
-[core]
-  excludesfile = ~/.config/git/ignore
+[credential]
+  helper = osxkeychain
+
+# [gpg]
+#   format = ssh
+# [gpg "ssh"]
+#   program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+# [commit]
+#   gpgsign = true
