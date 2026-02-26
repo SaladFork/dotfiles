@@ -1,0 +1,69 @@
+#:schema https://jj-vcs.github.io/jj/latest/config-schema.json
+
+[user]
+name = "Elad Shahar"
+email = "SaladFork@gmail.com"
+
+[revset-aliases]
+# prevent changing pushed or other-author commits
+"immutable_heads()" = "builtin_immutable_heads() | remote_bookmarks() | (trunk().. & ~mine())"
+"closest_bookmark(to)" = "heads(::to & bookmarks())"
+"closest_pushable(to)" = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
+
+[aliases]
+ab = ["abandon"]
+d = ["diff"]
+l = ["log"]
+# based on builtin_log_oneline
+# https://github.com/jj-vcs/jj/blob/main/cli/src/config/templates.toml#L102
+ll = ["log", "--template", """
+  if(root,
+    format_root_commit(self),
+    label(if(current_working_copy, "working_copy"),
+      concat(
+        separate(" ",
+          format_short_change_id_with_hidden_and_divergent_info(self),
+          bookmarks,
+          tags,
+          working_copies,
+          if(git_head, label("git_head", "git_head()")),
+          if(conflict, label("conflict", "conflict")),
+          if(config("ui.show-cryptographic-signatures").as_boolean(),
+            format_short_cryptographic_signature(signature)),
+          if(empty, label("empty", "(empty)")),
+          if(description,
+            description.first_line(),
+            label(if(empty, "empty"), description_placeholder),
+          ),
+        ) ++ "\n",
+      ),
+    )
+  )"""]
+sq = ["squash"]
+tug = [
+  "bookmark",
+  "move",
+  "--from",
+  "closest_bookmark(@)",
+  "--to",
+  "closest_pushable(@)",
+]
+
+[git]
+# prevent pushing wip/dev commits
+private-commits = "description(glob:'wip:*') | description(glob:'dev:*')"
+# allow pushing new bookmarks by default (--allow-new)
+# push-new-bookmarks = true
+
+[ui]
+default-command = ["status"]
+diff-formatter = ["difft", "--color=always", "$left", "$right"]
+# diff-editor = ":builtin"
+
+[templates]
+log = "builtin_log_comfortable"
+
+[template-aliases]
+"format_short_id(id)" = "id.shortest(4)"
+"format_short_signature(signature)" = "signature.email().local()"
+"format_timestamp(timestamp)" = "timestamp.ago()"

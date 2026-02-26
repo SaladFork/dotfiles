@@ -1,0 +1,59 @@
+{
+  "version": 3,
+  "lines": [
+    [
+      {
+        "id": "0a5efc7e-e04f-41b6-84d3-cb68e31e7112",
+        "type": "current-working-dir",
+        "backgroundColor": "bgMagenta",
+        "rawValue": true,
+        "metadata": {
+          "fishStyle": "true"
+        }
+      },
+      {
+        "id": "c14da675-f6c4-4a2c-a8c0-8c9bf362cfcc",
+        "type": "version",
+        "backgroundColor": "bgBrightYellow",
+        "metadata": {
+          "display": "time"
+        }
+      }
+    ],
+    [
+      {
+        "id": "ea445ccd-d732-4476-9190-d51afd78e919",
+        "type": "model",
+        "backgroundColor": "bgMagenta"
+      },
+      {
+        "id": "3",
+        "type": "context-percentage-usable",
+        "color": "brightBlack",
+        "rawValue": false,
+        "metadata": {
+          "inverse": "false"
+        }
+      }
+    ]
+  ],
+  "flexMode": "full-minus-40",
+  "compactThreshold": 60,
+  "colorLevel": 3,
+  "defaultPadding": " ",
+  "inheritSeparatorColors": false,
+  "globalBold": false,
+  "powerline": {
+    "enabled": true,
+    "separators": [
+      ""
+    ],
+    "separatorInvertBackground": [
+      false
+    ],
+    "startCaps": [],
+    "endCaps": [],
+    "theme": "monokai",
+    "autoAlign": false
+  }
+}
