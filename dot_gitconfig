@@ -1,0 +1,9 @@
+[user]
+  name = Elad Shahar
+  email = SaladFork@Gmail.com
+
+[url "https://github.com"]
+  insteadOf = "git://github.com/"
+
+[core]
+  excludesfile = ~/.config/git/ignore
