@@ -24,7 +24,8 @@
       {
         "id": "ea445ccd-d732-4476-9190-d51afd78e919",
         "type": "model",
-        "backgroundColor": "bgMagenta"
+        "backgroundColor": "bgMagenta",
+        "rawValue": true
       },
       {
         "id": "3",
@@ -37,7 +38,7 @@
       }
     ]
   ],
-  "flexMode": "full-minus-40",
+  "flexMode": "full-until-compact",
   "compactThreshold": 60,
   "colorLevel": 3,
   "defaultPadding": " ",
