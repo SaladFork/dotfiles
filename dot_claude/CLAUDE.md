@@ -24,6 +24,7 @@ specific instructions/question(s), to avoid using up your main context.
 - Use the `gh` CLI for all GitHub-related tasks (issues, PRs, searches, repo
   info, API queries). Prefer `--json` and `--jq` flags to control output and
   minimize context usage. Use `gh api graphql` for complex/nested queries.
+  Prefer it over calling Fetch with a github.com URL.
 - Offer to use the Chrome or Playwright MCPs to verify browser apps are working
   as expected, when relevant. Be sure to clean up screenshots after looking at
   them.
