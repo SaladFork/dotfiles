@@ -23,6 +23,7 @@
       "Bash(jj bookmark*)",
       "Bash(jj commit*)",
       "Bash(jj describe*)",
+      "Bash(jj diff*)",
       "Bash(jj edit*)",
       "Bash(jj log*)",
       "Bash(jj new*)",
