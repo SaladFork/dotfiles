@@ -10,6 +10,9 @@
   execution and packages, except where a project has already established an
   alternative.
 - Prefer Jujutsu (jj) over git for version control (travere, read, commit)
+- Use the `gh` CLI for all GitHub-related tasks (issues, PRs, searches, repo
+  info, API queries). Prefer `--json` and `--jq` flags to control output and
+  minimize context usage. Use `gh api graphql` for complex/nested queries.
 - Offer to use the Chrome or Playwright MCPs to verify browser apps are working
   as expected, when relevant. Be sure to clean up screenshots after looking at
   them.
