@@ -63,4 +63,5 @@ When analyzing the diff, consider splitting commits based on these criteria:
 ### Automation tips
 
 - Pass `--no-editor` on describe, split, etc., in headless scripts.
-- Prefer `--template '{id} {description|escape_json}\n'` for JSON‑friendly output.
+- You can pass `-T` (`--template`) to customize the output format, and the
+  `json()` global function for machine-readable JSON.
