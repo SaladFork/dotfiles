@@ -62,6 +62,7 @@ When analyzing the diff, consider splitting commits based on these criteria:
 
 ### Automation tips
 
-- Pass `--no-editor` on describe, split, etc., in headless scripts.
+- In scripts, always pass `-m` to `jj describe` so no interactive
+  editor opens. For multi-line messages use a heredoc or `--stdin`.
 - You can pass `-T` (`--template`) to customize the output format, and the
   `json()` global function for machine-readable JSON.
