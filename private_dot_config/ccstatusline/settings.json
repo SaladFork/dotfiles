@@ -3,18 +3,49 @@
   "lines": [
     [
       {
+        "id": "71b1ec14-e808-42f6-a1f5-acf0b6095df6",
+        "type": "model",
+        "color": "black",
+        "backgroundColor": "bgBrightGreen",
+        "rawValue": true
+      },
+      {
         "id": "0a5efc7e-e04f-41b6-84d3-cb68e31e7112",
         "type": "current-working-dir",
-        "backgroundColor": "bgMagenta",
+        "color": "brightWhite",
+        "backgroundColor": "bgBrightBlack",
         "rawValue": true,
         "metadata": {
           "fishStyle": "true"
         }
+      }
+    ],
+    [
+      {
+        "id": "929106b7-1d48-4082-980a-c40ff14ab6fb",
+        "type": "context-bar",
+        "color": "brightGreen",
+        "metadata": {
+          "display": "progress-short"
+        }
+      }
+    ],
+    [
+      {
+        "id": "2230d06e-46f7-4a33-93b5-607dc02f3478",
+        "type": "session-usage",
+        "color": "",
+        "rawValue": false,
+        "merge": true,
+        "metadata": {
+          "display": "progress-short"
+        }
       },
       {
-        "id": "c14da675-f6c4-4a2c-a8c0-8c9bf362cfcc",
-        "type": "version",
-        "backgroundColor": "bgBrightYellow",
+        "id": "d3e7302e-5290-47c7-8d7c-53ebc83261e2",
+        "type": "reset-timer",
+        "color": "",
+        "rawValue": true,
         "metadata": {
           "display": "time"
         }
@@ -22,18 +53,19 @@
     ],
     [
       {
-        "id": "ea445ccd-d732-4476-9190-d51afd78e919",
-        "type": "model",
-        "backgroundColor": "bgMagenta",
-        "rawValue": true
+        "id": "e9baa03b-aef6-49e2-9477-fb7e8892d008",
+        "type": "custom-text",
+        "color": "brightBlack",
+        "customText": "Weekly:  ",
+        "merge": "no-padding"
       },
       {
-        "id": "3",
-        "type": "context-percentage-usable",
+        "id": "3b43e7db-0efa-466b-a457-d547efb15527",
+        "type": "weekly-usage",
         "color": "brightBlack",
-        "rawValue": false,
+        "rawValue": true,
         "metadata": {
-          "inverse": "false"
+          "display": "progress-short"
         }
       }
     ]
@@ -45,7 +77,7 @@
   "inheritSeparatorColors": false,
   "globalBold": false,
   "powerline": {
-    "enabled": true,
+    "enabled": false,
     "separators": [
       ""
     ],
