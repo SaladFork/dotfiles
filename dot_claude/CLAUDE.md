@@ -10,6 +10,8 @@ specific instructions/question(s), to avoid using up your main context.
 - If more information would be pertinent for a request, ambiguities are present,
   or more permissions are needed -- stop and ask (use the AskUserQuestion tool).
   Keep asking until we've covered everything.
+- When writing tests, test the requirements not the implementation. Don't write
+  tests for what the type system guarantees.
 
 ## Tools
 
