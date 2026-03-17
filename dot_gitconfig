@@ -1,6 +1,7 @@
 [user]
   name = Elad Shahar
   email = SaladFork@Gmail.com
+	signingkey = /Users/elad/.ssh/id_ed25519.pub
   # signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHeL7gY4FPO5MnWBbbjOK2Wb1Su6usLg64tCvmcTa8wx
 
 [alias]
@@ -40,3 +41,9 @@
 #   program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 # [commit]
 #   gpgsign = true
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true

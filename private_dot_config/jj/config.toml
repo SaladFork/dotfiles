@@ -7,7 +7,12 @@ email = "SaladFork@gmail.com"
 [revset-aliases]
 # prevent changing pushed or other-author commits
 "immutable_heads()" = "builtin_immutable_heads() | remote_bookmarks() | (trunk().. & ~mine())"
+# "immutable_heads()" = "builtin_immutable_heads() | (trunk().. & ~mine())"
+"closest_bookmark()" = "heads(::@ & bookmarks())"
 "closest_bookmark(to)" = "heads(::to & bookmarks())"
+"closest_remote_bookmark()" = "heads(::@ & remote_bookmarks())"
+"closest_remote_bookmark(to)" = "heads(::to & remote_bookmarks())"
+"closest_pushable()" = 'heads(::@ & mutable() & ~description(exact:"") & (~empty() | merges()))'
 "closest_pushable(to)" = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
 
 [aliases]
@@ -39,6 +44,7 @@ ll = ["log", "--template", """
       ),
     )
   )"""]
+lc = ["log", "-T", "builtin_log_compact", "-r", "trunk()::@"]
 sq = ["squash"]
 tug = [
   "bookmark",
@@ -67,3 +73,11 @@ log = "builtin_log_comfortable"
 "format_short_id(id)" = "id.shortest(4)"
 "format_short_signature(signature)" = "signature.email().local()"
 "format_timestamp(timestamp)" = "timestamp.ago()"
+
+[signing]
+behavior = "own"
+backend = "ssh"
+key = "~/.ssh/id_ed25519.pub"
+
+[signing.backends.ssh]
+allowed-signers = "/Users/elad/.ssh/allowed_signers"

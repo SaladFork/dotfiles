@@ -10,6 +10,14 @@
         "rawValue": true
       },
       {
+        "id": "983a21f1-11a5-461b-9cf9-9df86cd481e7",
+        "type": "thinking-effort",
+        "color": "brightGreen",
+        "rawValue": false
+      }
+    ],
+    [
+      {
         "id": "0a5efc7e-e04f-41b6-84d3-cb68e31e7112",
         "type": "current-working-dir",
         "color": "brightWhite",
@@ -18,6 +26,11 @@
         "metadata": {
           "fishStyle": "true"
         }
+      },
+      {
+        "id": "66c11af6-a9ed-4cdd-b1fb-d4efed2ac8a2",
+        "type": "custom-command",
+        "commandPath": "jj bookmark list --ignore-working-copy -r 'closest_bookmark(@)' --color=never -T 'name ++ \" \"' 2>/dev/null || true"
       }
     ],
     [
@@ -67,6 +80,15 @@
         "metadata": {
           "display": "progress-short"
         }
+      },
+      {
+        "id": "97bc8d72-c016-4b30-bf24-f546eb01b35b",
+        "type": "weekly-reset-timer",
+        "rawValue": true,
+        "metadata": {
+          "compact": "false"
+        },
+        "color": "brightBlack"
       }
     ]
   ],

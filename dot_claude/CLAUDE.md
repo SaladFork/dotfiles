@@ -18,17 +18,18 @@ specific instructions/question(s), to avoid using up your main context.
 - Prefer bun/bunx over node/npm/npmx/yarn/pnpm for JavaScript/TypeScript
   execution and packages, except where a project has already established an
   alternative.
-  - Use relevant package scripts over bunx when possible (bun run test, bun run
-    build).
+  - Use relevant package scripts over bunx when possible
+    (bun run test, bun run build, bun run lint, bun run typecheck).
 - Prefer Jujutsu (`jj`) over git for version control (travere, read, commit).
-  Proactively commit (use the skill) after finishing code changes, though
-  consider amending/squashing previous commits especially if actively iterating.
+  Proactively commit (use the skill) early and often when making code changes,
+  and consider amending/squashing previous commits especially if actively
+  iterating. Pass `--git` to `jj diff` for a more familiar diff.
 - Use the `gh` CLI for all GitHub-related tasks (issues, PRs, searches, repo
   info, API queries). Prefer `--json` and `--jq` flags to control output and
   minimize context usage. Use `gh api graphql` for complex/nested queries.
   Prefer it over calling Fetch with a github.com URL.
-- Offer to use the Chrome or Playwright MCPs to verify browser apps are working
-  as expected, when relevant. Be sure to clean up screenshots after looking at
-  them.
+- Offer to use the Playwright CLI to verify browser apps are working as
+  expected, when relevant.
+  - Backups: Playwright MCP, Chrome
 - Always use Context7 MCP when needing library/API documentation, code
   generation, setup, or configuration steps without having to explicitly ask.
