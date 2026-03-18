@@ -46,14 +46,7 @@ ll = ["log", "--template", """
   )"""]
 lc = ["log", "-T", "builtin_log_compact", "-r", "trunk()::@"]
 sq = ["squash"]
-tug = [
-  "bookmark",
-  "move",
-  "--from",
-  "closest_bookmark(@)",
-  "--to",
-  "closest_pushable(@)",
-]
+tug = ["bookmark", "advance"]
 
 [git]
 # prevent pushing wip/dev commits
@@ -81,3 +74,7 @@ key = "~/.ssh/id_ed25519.pub"
 
 [signing.backends.ssh]
 allowed-signers = "/Users/elad/.ssh/allowed_signers"
+
+[revsets]
+bookmark-advance-to = "closest_pushable(@)"
+bookmark-advance-from = "closest_bookmark(to)"

@@ -20,10 +20,10 @@ specific instructions/question(s), to avoid using up your main context.
   alternative.
   - Use relevant package scripts over bunx when possible
     (bun run test, bun run build, bun run lint, bun run typecheck).
-- Prefer Jujutsu (`jj`) over git for version control (travere, read, commit).
+- Prefer Jujutsu (`jj`) over git for version control (traverse, read, commit).
   Proactively commit (use the skill) early and often when making code changes,
   and consider amending/squashing previous commits especially if actively
-  iterating. Pass `--git` to `jj diff` for a more familiar diff.
+  iterating.
 - Use the `gh` CLI for all GitHub-related tasks (issues, PRs, searches, repo
   info, API queries). Prefer `--json` and `--jq` flags to control output and
   minimize context usage. Use `gh api graphql` for complex/nested queries.
