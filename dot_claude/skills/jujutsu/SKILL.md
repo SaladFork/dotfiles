@@ -475,6 +475,16 @@ mass rebases.
 - `jj squash -r <rev>` opens an editor to combine descriptions. Pass `-m` to
   avoid this, or use `--use-destination-message` / `-u` to keep the parent's
   message without prompting.
+- **`jj split` with `-m` and file paths is fully non-interactive** — it puts
+  the specified files into a new parent commit with the given message, and
+  leaves remaining files in the original commit keeping its message:
+  ```bash
+  # Split <rev>: put a.txt in a new parent commit, leave b.txt in the original.
+  jj split -r <rev> -m "Commit for a.txt" -- a.txt
+  # For more splits, repeat on the resulting parent commit.
+  ```
+  Without `-m`, `jj split` opens an interactive editor — always pass `-m` when
+  running non-interactively.
 - Use `-T` (`--template`) to customize output format.
 - You can operate on any revision, not just the working copy. Use `-r <rev>`.
 
