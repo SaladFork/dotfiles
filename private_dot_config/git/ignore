@@ -2,3 +2,6 @@
 .jj
 .claude*
 .vscode*
+
+.playwright-cli
+.worktrees
