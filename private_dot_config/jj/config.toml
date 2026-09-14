@@ -73,7 +73,7 @@ backend = "ssh"
 key = "~/.ssh/id_ed25519.pub"
 
 [signing.backends.ssh]
-allowed-signers = "/Users/elad/.ssh/allowed_signers"
+allowed-signers = "~/.ssh/allowed_signers"
 
 [revsets]
 bookmark-advance-to = "closest_pushable(@)"

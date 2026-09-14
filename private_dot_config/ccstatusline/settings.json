@@ -38,7 +38,7 @@
       {
         "id": "66c11af6-a9ed-4cdd-b1fb-d4efed2ac8a2",
         "type": "custom-command",
-        "commandPath": "/Users/elad/.config/ccstatusline/vcs-summary.sh"
+        "commandPath": "~/.config/ccstatusline/vcs-summary.sh"
       }
     ],
     [
